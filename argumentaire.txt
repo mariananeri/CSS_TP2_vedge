@@ -1,0 +1,34 @@
+NAVIGATION
+* Navigation primaire en haut de page
+** suggestion: espace pris par navigation ne s'agrandit pas si la page s'élargie mais réduit si passe un certain point
+** suggestion: navigation reste visible pour que les utilisateurs puissent naviguer vers les autres pages en tout temps
+* Navigation secondaire en bas de page
+** pratique qui semble courante sur les sites de restaurants consultés (Bloom sushi, Archway, la panthère verte, Copper Branch, Momo Sushi, Lov Montreal)
+** possibilité d'ajouter d'autre contenu. Sinon, mettre les lieux sur une ligne horizontale au lieu de verticale
+
+PRIORISATION
+* Section : Botanique et décadent
+    informer le (futur) client de la proposition de valeur du la chaine Vedge à haut niveau
+    idée: image en fond et texte pas dessus, car plusieurs sites de restaurant suivent se modèl pour la page d'accueil
+
+* Section : Cusine artisanal
+    préciser les valeurs de du restaurant et informatio le (futur) client du type de nourriture auxquels il peut s'attendre
+    composition inspiré par archway https://archwaymtl.com/en/home-en/
+    ajout du bouton Menu (voir AJOUT DE SECTION)
+* Section : Promo
+    attirer d'avantage le (futur) client à se rendre dans une succursale
+* Section : Trouver
+    aider le (future) client à trouver une succursale proche de chez sa localisation maintenant qu'il a été convaincu d'essayer la nourriture "vedge"
+* Section : Restaurant en vedette
+    montrer les 6 restaurants vedettes pour les (future clients) et potentiels nouveau franchisé afin de voir si le territoir qu'ils ont en tête est déjà couvert ou non
+* Section : Franchise
+    donner la possibilité aux gens qui croient en la mission et cuisine de "Vedge" de se joindre à la franchise
+
+
+AJOUT DE SECTION
+description + bouton menu
+    * la description est extraite de la page philosophie. Elle permet d'informer le futur client du type de cuisine et valeur du restaurant
+    * le bouton Meu permet au future cient ou client d'accédé au menu sans se rendre au pied de page. Généralement, les gens aiment avoir une idée ce qui les attend en terme de nourriture dans un restaurant, que ce soit pour des raisons de préférence ou restriction alimentaire
+
+LIENS
+    * L'effet au survol est une suggestion et seulement présente pour montrer qu'il s'agit d'un élément cliquable

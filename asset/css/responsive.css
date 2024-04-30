@@ -1,0 +1,562 @@
+/*----------- Écran de 1180px et moins ---------------*/
+
+@media screen and (max-width: 1180px) {
+
+   /*=====================
+    rythme et typographie de base
+    =====================*/
+
+    html {
+        font-family: gopher, sans-serif;
+        line-height: 1.4;
+        font-size: 14px;
+    }
+
+    h1 {
+        font-size: 4rem;
+        font-weight: 400;
+        color: var(--citron);
+    }
+    
+    h2 {
+        font-size: 1.728rem;
+    }
+    
+    h3 {
+        font-size: 1.44rem;
+    }
+    
+    h4 {
+        font-size: 1.2rem;
+    }
+    
+    .sticky {
+        position: sticky;
+    }
+
+    [class^="nav"] a {
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+        margin-top: 0;
+        color: var(--coco);
+    }
+
+    [class^="nav"] {
+        display: flex;
+        flex-direction: row;
+    }
+
+    [class^="nav"] a.logo {
+        color: var(--citron);
+        font-size: 3rem;
+        font-weight: 500;
+        padding: 0px;
+     }
+
+    [class^="nav"] a.logo:hover {
+        color: var(--papaye);
+        text-decoration: none;
+    }
+
+    .nav-primaire {    
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .nav-primaire > ul {
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+        padding-bottom: 20px;
+    }
+
+    p, a, input {
+        font-size: 1rem;
+}
+
+input[type="text"] {
+	min-width: 20vh;
+    max-height: 30px;
+	padding: 5px 15px;
+	border: 2px solid var(--brocoli);
+	color: var(--brocoli);
+}
+
+/*nav secondaire*/
+.nav-secondaire{
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.nav-secondaire a{
+	font-size: 1rem;
+}
+
+.nav-secondaire a:hover{
+	color: #c5ed91;
+}
+
+/* footer */
+
+footer {
+	background-color: var(--noix);
+	padding: 2rem 2rem;
+
+	display: flex;
+    flex-direction: column;
+    gap:10px;
+	justify-content: space-between;
+	align-items:center;
+}
+
+.logo-reseau {
+	max-width: 20px;
+	aspect-ratio: 1/1;
+}
+
+/*espacement entre sections principales*/
+    main > * + section {
+        padding: 50px 20px;
+}
+
+/*espacement des éléments qui ne sont pas les premiers élements apres une section ou un div*/
+section *:not(section, div) + * {
+	margin-top: 1.44rem;
+}
+
+.titre > p {
+	font-size: 1rem;
+}
+
+/*=====================
+strucutre de base
+** element centré si contient seulement du text ou des boutons
+** alternance droite gauche des images qui ne sont pas de grande taille
+=====================*/
+
+main > section {
+	max-width: 100%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+section > * {
+	text-align: center;
+}
+
+.colonnes-deux {
+	display: flex;
+    flex-direction: column;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: space-evenly;
+}
+
+.colonnes-deux > * {
+	min-width: 20ch;
+	max-width: 80ch;
+
+	flex-basis: 0;
+	flex-grow: 1;
+}
+
+/*retirer margin-top d'une section dans le cas de l'affichage 2 colones*/
+.colonnes-deux > section {
+	margin-top: 0;
+}
+
+/*=====================
+typo speciale
+=====================*/
+
+.promo > p {
+	font-size: 1.2rem;
+    margin: 0px;
+}
+
+label{
+	font-size: 1.4rem;
+}
+
+.description p {
+	max-width: 50ch;
+    font-size: 1.2rem;
+}
+
+p.txtCoco {
+	color: var(--coco);
+}
+
+/*=====================
+GRILLE
+=====================*/
+
+.grille {
+	display: grid;
+	grid-template-columns: auto auto auto;
+	align-items: end;
+	padding-top: 20px;
+}
+
+.grille > article h3{
+	font-size: 1.5rem;
+}
+
+.grilleLarge {
+	max-width: 90%;
+	margin: auto;
+}
+
+/*=====================
+BOX MENU HOME
+=====================*/
+
+.boxMenu {
+	min-height: 10vh;
+}
+
+.titreMenu h3{
+    font-size: 1.44rem;
+}
+
+.grilleMenu {
+	gap: 20px;
+	display: grid;
+	grid-template-columns: auto auto auto auto;
+	align-items: end;
+	width: 90%;
+	align-content: center;
+	margin: auto;
+}
+
+.grilleMenu > article {
+	min-height: 15vh;
+    min-width: 15vh;
+}
+
+/*=====================
+élément graphique
+** bouton
+** images
+=====================*/
+
+.titre {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+
+	position: absolute;
+	color: var(--coco);
+	text-align: center;
+	max-width: 35ch;
+	padding: 40px;
+}
+
+.img-grande {
+	min-width: 100%;
+	object-fit: cover;
+}
+
+.img-hero {
+	max-width: 100%;
+	object-fit: cover;
+}
+
+.img-moyenne {
+	max-width: 300px;
+	aspect-ratio: 16/9;
+}
+
+.img-support {
+	max-width: 500px;
+	aspect-ratio: 16/9;
+}
+
+.invisible {
+    display: none;
+}
+
+
+}
+
+
+/*----------- Écran de 720px et moins ---------------*/
+
+@media screen and (max-width: 720px) {
+
+    /*=====================
+     rythme et typographie de base
+     =====================*/
+ 
+     html {
+         font-family: gopher, sans-serif;
+         line-height: 1.4;
+         font-size: 14px;
+     }
+ 
+     h1 {
+         font-size: 4rem;
+         font-weight: 400;
+         color: var(--citron);
+     }
+     
+     h2 {
+         font-size: 1.728rem;
+     }
+     
+     h3 {
+         font-size: 1.44rem;
+     }
+     
+     h4 {
+         font-size: 1.2rem;
+     }
+     
+     .sticky {
+         position: sticky;
+     }
+ 
+     [class^="nav"] a {
+         display: flex;
+         flex-direction: row;
+         gap: 20px;
+         margin-top: 0;
+         color: var(--coco);
+     }
+ 
+     [class^="nav"] {
+         display: flex;
+         flex-direction: row;
+     }
+ 
+     [class^="nav"] a.logo {
+         color: var(--citron);
+         font-size: 3rem;
+         font-weight: 500;
+         padding: 0px;
+      }
+ 
+     [class^="nav"] a.logo:hover {
+         color: var(--papaye);
+         text-decoration: none;
+     }
+ 
+     .nav-primaire {    
+         display: flex;
+         flex-direction: column;
+         gap: 5px;
+     }
+ 
+     .nav-primaire > ul {
+         display: flex;
+         flex-direction: row;
+         gap: 10px;
+         padding-bottom: 20px;
+     }
+ 
+     p, a, input {
+         font-size: 1rem;}
+ 
+ input[type="text"] {
+     min-width: 20vh;
+     max-height: 30px;
+     padding: 5px 15px;
+     border: 2px solid var(--brocoli);
+     color: var(--brocoli);
+ }
+ 
+ /*nav secondaire*/
+ .nav-secondaire{
+     margin-left: auto;
+     margin-right: auto;
+ }
+ 
+ .nav-secondaire a{
+     font-size: 1rem;
+ }
+ 
+ .nav-secondaire a:hover{
+     color: #c5ed91;
+ }
+
+ /* footer */
+ 
+ footer {
+     background-color: var(--noix);
+     padding: 2rem 2rem;
+ 
+     display: flex;
+     flex-direction: column;
+     gap:10px;
+     justify-content: space-between;
+     align-items:center;
+ }
+ 
+ .logo-reseau {
+     max-width: 20px;
+     aspect-ratio: 1/1;
+ }
+ 
+ /*espacement entre sections principales*/
+     main > * + section {
+         padding: 20px 20px;
+ }
+ 
+ /*espacement des éléments qui ne sont pas les premiers élements apres une section ou un div*/
+ section *:not(section, div) + * {
+     margin-top: 1.2rem;
+ }
+ 
+ .titre > p {
+     font-size: 1rem;
+ }
+ 
+ /*=====================
+ strucutre de base
+ ** element centré si contient seulement du text ou des boutons
+ ** alternance droite gauche des images qui ne sont pas de grande taille
+ =====================*/
+ 
+ main > section {
+     max-width: 100%;
+     margin-left: auto;
+     margin-right: auto;
+ }
+ 
+ section > * {
+     text-align: center;
+ }
+ 
+ .colonnes-deux {
+     display: flex;
+     flex-direction: column;
+     flex-wrap: wrap;
+     align-items: center;
+     justify-content: space-evenly;
+ }
+ 
+ .colonnes-deux > * {
+     min-width: 20ch;
+     max-width: 80ch;
+ 
+     flex-basis: 0;
+     flex-grow: 1;
+ }
+ 
+ /*retirer margin-top d'une section dans le cas de l'affichage 2 colones*/
+ .colonnes-deux > section {
+     margin-top: 0;
+ }
+ 
+ /*=====================
+ typo speciale
+ =====================*/
+ 
+ .promo > p {
+     font-size: 1.2rem;
+     margin: 0px;
+ }
+ 
+ label{
+     font-size: 1.4rem;
+ }
+ 
+ .description p {
+     max-width: 50ch;
+     font-size: 1.2rem;
+ }
+ 
+ p.txtCoco {
+     color: var(--coco);
+ }
+ 
+ /*=====================
+ GRILLE
+ =====================*/
+ 
+ .grille {
+     display: grid;
+     grid-template-columns: auto auto auto;
+     align-items: end;
+     padding-top: 20px;
+ }
+ 
+ .grille > article h3{
+     font-size: 1.5rem;
+ }
+ 
+ .grilleLarge {
+     max-width: 90%;
+     margin: auto;
+ }
+ 
+ /*=====================
+ BOX MENU HOME
+ =====================*/
+ 
+ .titreMenu h3{
+     font-size: 1rem;
+     font-weight: 400;
+     padding: 5px;
+ }
+ 
+ .grilleMenu {
+     display: grid;
+     grid-template-columns: auto;
+     align-items: end;
+     width: 90%;
+     gap:10px;
+ }
+ 
+ .grilleMenu > article {
+     max-height: 10vh;
+     min-width: 10vh;
+ }
+ 
+ /*=====================
+ élément graphique
+ ** bouton
+ ** images
+ =====================*/
+ 
+ .titre {
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+ 
+     position: absolute;
+     color: var(--coco);
+     text-align: center;
+     max-width: 35ch;
+     padding: 20px;
+ }
+ 
+ .img-grande {
+     min-width: 100%;
+     object-fit: cover;
+ }
+ 
+ .img-hero {
+     max-width: 100%;
+     min-height: 350px;
+     object-fit: cover;
+ }
+ 
+ .img-moyenne {
+     max-width: 200px;
+     aspect-ratio: 16/9;
+ }
+ 
+ .img-support {
+     max-width: 500px;
+     aspect-ratio: 16/9;
+ }
+ 
+ .invisible {
+     display: none;
+ }
+ 
+ 
+ }
