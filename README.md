@@ -1,6 +1,6 @@
 # Travail pratique #02 — Concevoir une maquette adaptée à partir d’un prototype
 
-##Mise en contexte
+## Mise en contexte
 
 Le département de stratégie et d’expérience utilisateur vous a rendu son premier livrable : le prototype. Vous, en tant que concepteur(s), devez prendre en charge la deuxième phase de production de la plateforme Web : la maquette. Celle-ci devra être adaptée à de multiples appareils, de multiples configurations de fenêtre et devra, aussi, respecter les intentions initiales du prototype. À ce stade-ci de la production, il est encore temps d’apporter des ajustements et de faire des propositions. Profitez-en donc pour améliorer le travail de vos collègues stratèges et concepteurs UX tout en vous assurant de bien justifier chacun des ajustements et chacune des propositions.
 
