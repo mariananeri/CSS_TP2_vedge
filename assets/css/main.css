@@ -1,0 +1,539 @@
+/*=====================
+RESPONSIVE
+=====================*/
+
+@import url(./responsive.css);
+
+/*=====================
+REMISE À ZÉRO DES STYLE
+=====================*/
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+ul,
+li {
+	list-style: none;
+}
+
+a {
+	text-decoration: none;
+}
+
+/*=====================
+COULEURS
+=====================*/
+:root {
+	--epinard: #12241e;
+	--brocoli: #193f2d;
+	--laitue: #5d9a64;
+	--citron: #c5ed91;
+	--papaye: #d6503c;
+	--noix: #561107;
+	--abricot: #fddebe;
+	--coco: #f6f4f1;
+}
+
+/*=====================
+GENERAL STYLE
+=====================*/
+
+html {
+	font-family: gopher, sans-serif;
+	line-height: 1.6;
+	font-size: 16px;
+}
+
+h1 {
+	font-size: 5rem;
+	font-weight: 400;
+	color: var(--citron);
+}
+
+h2 {
+	font-size: 2.488rem;
+}
+
+h3 {
+	font-size: 2.074rem;
+}
+
+h4 {
+	font-size: 1.44rem;
+}
+
+p,
+a,
+input {
+	font-size: 1.3rem;
+}
+
+input[type="text"] {
+	max-height: 50px;
+	min-width: 10vw;
+	padding: 5px 15px;
+	border: 2px solid var(--brocoli);
+	color: var(--brocoli);
+}
+
+/* CORRECTION: n'utilisez pas des paddings pour faire des marges.*/
+/*espacement entre sections principales*/
+main > * + section {
+	padding: 100px 20px;
+}
+
+main > section:last-of-type {
+	background-image: url(../imgs/banner_franchise.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	padding: 10vh;
+	min-height: 20vh;
+	color: var(--coco);
+	align-items: center;
+}
+
+/*espacement des éléments qui ne sont pas les premiers élements apres une section ou un div*/
+section *:not(section, div) + * {
+	margin-top: 1.44rem;
+}
+
+/* CORRECTION: N'utilisez que des sélecteurs absolument nécessaires dans vos sélecteurs combinés.  */
+/*espacement des boutons*/
+.bouton{
+	margin-top: 2.986rem;
+}
+
+.titre > p {
+	font-size: 1.44rem;
+}
+
+/*=====================
+typo speciale
+=====================*/
+
+.promo > p {
+	font-size: 1.728rem;
+}
+
+label{
+	font-size: 1.44rem;
+}
+
+.txtCoco {
+	color: var(--coco);
+}
+
+
+/*=====================
+strucutre de base
+** element centré si contient seulement du text ou des boutons
+** alternance droite gauche des images qui ne sont pas de grande taille
+=====================*/
+
+/* CORRECTION: Cette propriété doit être associée à une autre.*/
+header {
+	inset: 0;
+	background-color: var(--epinard);
+	color: var(--abricot);
+	z-index: 1;
+}
+
+main > section {
+	max-width: 100%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+section > * {
+	text-align: center;
+}
+
+.colonnes-deux {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: space-evenly;
+}
+
+.colonnes-deux > * {
+	min-width: 30ch;
+	max-width: 80ch;
+
+	flex-basis: 0;
+	flex-grow: 1;
+}
+
+/*retirer margin-top d'une section dans le cas de l'affichage 2 colones*/
+.colonnes-deux > section {
+	margin-top: 0;
+}
+
+.description p {
+	max-width: 60ch;
+	text-align: center;
+}
+
+.grille {
+	gap: 40px;
+	display: grid;
+	grid-template-columns: auto auto auto;
+	align-items: end;
+	padding-top: 40px;
+}
+
+.grille > article {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	min-width: 100%;
+	min-height: 100%;
+}
+
+.grilleLarge {
+	max-width: 70%;
+	margin: auto;
+}
+
+article a{
+	color: var(--epinard);
+	text-underline-offset: 10px;
+	padding: 20px;
+}
+
+.grilleLarge > article a:hover{
+	color: var(--coco);
+	text-decoration: underline 2px solid var(--coco);
+	text-underline-offset: 10px;
+	background-color: var(--papaye);
+}
+
+/*=====================
+élément graphique
+** bouton
+** images
+=====================*/
+
+
+.titre {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+
+	position: absolute;
+	color: var(--coco);
+	text-align: center;
+	max-width: 45ch;
+	padding: 10vh;
+}
+
+picture {
+	display: block;
+
+	max-width: 100%;
+	max-height: 100%;
+}
+
+
+.img-grande {
+	min-width: 100%;
+	object-fit: cover;
+}
+
+.img-hero {
+	min-width: 100%;
+	object-fit: cover;
+}
+
+/*CORRECTION: Vous utilisez des unités fragiles ou erratiques. Attention.  */
+.img-moyenne {
+	max-width: 20vw;
+	object-fit: cover;
+}
+
+.img-support {
+	max-width: 500px;
+	aspect-ratio: 16/9;
+}
+
+.img-petite {
+	max-width: 100%;
+	aspect-ratio: 16/9;
+	object-fit: cover;
+}
+
+.logo {
+	font-size: 2rem;
+	color: var(--citron);
+	font-weight: 400;
+}
+
+.logo-reseau {
+	max-width: 30px;
+	aspect-ratio: 1/1;
+}
+
+.img-critique {
+	min-width: 100px;
+	aspect-ratio: 1/1;
+}
+
+/*retirer border style des inputs de type submit pour appliquer le style d'un bouton*/
+input[type="submit"] {
+	border: none;
+}
+
+.bouton {
+	display: block;
+	min-width: 15ch;
+	max-width: fit-content;
+	background-color: var(--papaye);
+	color: var(--coco);
+	padding: 15px 25px;
+	text-transform: uppercase;
+
+	margin-left: auto;
+	margin-right: auto;
+
+	transition-property: background-color;
+	transition-duration: 200ms;
+}
+
+.bouton:hover {
+	background-color: var(--noix);
+}
+
+.lien:hover {
+	opacity: 0.5;
+}
+
+/*=====================
+navigation principale, secondaire et liste de lien
+=====================*/
+.liste {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.liste-critique {
+	gap : 4.999rem;
+}
+
+.liste-reseau {
+	gap: 1.44rem;
+}
+
+.liste > li {
+	margin-top: 0;
+}
+nav {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	gap:20px;
+}
+
+.nav-primaire {
+	padding: 0.2rem 2rem;
+
+	max-width: 90%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.nav-primaire > ul {
+	flex-grow: 1;
+
+	display: flex;
+	align-items: center;
+	justify-content: space-evenly;
+	position: relative;
+}
+
+.menu-deroulant > ul {
+	position: absolute;
+	width: max-content;
+	padding: 20px;
+	background-color: var(--epinard);
+}
+
+.menu-deroulant:not(:hover) > ul {
+	opacity: 0;
+	transform: translateY(-20px);
+}
+
+.side-menu {
+    display: none;}
+
+/*lien de nav*/
+
+nav a {
+	display: block;
+	padding: 10px;
+	margin-top: 0;
+	color: var(--coco);
+}
+
+nav a:hover {
+	color: var(--abricot);
+	text-decoration: underline;
+	text-underline-offset: 10px;
+}
+
+/* CORRECTION: Méthode (CSS) : Attention de ne pas surqualifier vos sélecteurs.*/
+
+.logo a{
+   color: var(--citron);
+   font-size: 3rem;
+   font-weight: 500;
+}
+
+.logo a:hover {
+	color: var(--abricot);
+	text-decoration: none;
+ }
+
+/*nav secondaire*/
+
+.nav-secondaire{
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.nav-secondaire a:hover{
+	color: #c5ed91;
+}
+
+/*=====================
+footer
+=====================*/
+footer {
+	background-color: var(--noix);
+	padding: 2rem 8rem;
+
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+/*=====================
+règles fonctionnelles
+=====================*/
+/*source: CSS de https://bloomsushi.com/en/ */
+.sticky {
+	position: sticky;
+}
+
+/*=====================
+BG COULEURS
+=====================*/
+
+.bgFonce {
+	background-color: var(--epinard);
+}
+
+.bgCitron {
+	background-color: var(--citron);
+}
+
+.bgAbricot {
+	background-color: var(--abricot);
+}
+
+.bgPattern {
+	background-image: url(../imgs/pattern_abricot.jpg);
+	background-repeat: repeat;
+	background-color: var(--coco);
+	background-blend-mode: multiply;
+}
+/*=====================
+TITRE COULEURS
+=====================*/
+
+.titreVert h2 {
+	color: var(--laitue);
+}
+
+.titrePapaye h2 {
+	color: var(--papaye);
+}
+
+.titreCoco h2 {
+	color: var(--coco);
+}
+
+.titreVertFonce h2 {
+	color: var(--brocoli);
+}
+
+/*=====================
+MENU
+=====================*/
+
+.boxMenu {
+	min-height: 30vh;
+}
+
+.titreMenu h3{
+	color: var(--coco);
+	margin-top: auto;
+	margin-bottom: auto;
+	padding: 10px 20px;
+	border: 0px solid var(--citron);
+}
+
+.menuBG {
+	background-size: cover;
+	background-color: var(--brocoli);
+	background-blend-mode: overlay;
+	text-transform: uppercase;
+}
+
+.menuBG:hover {
+	background-size: cover;
+	background-color: var(--epinard);
+	background-blend-mode: multiply;
+	cursor: pointer;
+}
+
+.menuBG:hover h3{
+	color: var(--citron);
+	text-decoration: underline 2px solid var(--citron);
+	text-underline-offset: 10px;
+}
+
+.brunch {
+	background-image: url(../imgs/menu_brunch.jpg);
+}
+
+.diner {
+	background-image: url(../imgs/menu_diner.jpg);
+}
+
+.souper {
+	background-image: url(../imgs/menu_souper.jpg);
+}
+
+.boissons {
+	background-image: url(../imgs/menu_boissons.jpg);
+}
+
+.grilleMenu {
+	gap: 20px;
+	display: grid;
+	grid-template-columns: auto auto auto auto;
+	align-items: end;
+	width: 80%;
+	align-content: center;
+	margin: auto;
+}
+
+.grilleMenu > article {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	min-height: 30vh;
+}
+
